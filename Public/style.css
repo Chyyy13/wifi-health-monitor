@@ -1,0 +1,98 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e5e7eb;
+}
+
+header {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+header h1 {
+  color: #22d3ee;
+  font-size: 36px;
+}
+
+header p {
+  color: #94a3b8;
+}
+
+.status {
+  display: inline-block;
+  background: #0ea5e9;
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: #020617;
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background: #020617;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 0 1px #1e293b;
+}
+
+.card h3 {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.value {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.quality-card {
+  grid-row: span 2;
+}
+
+.gauge {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: auto;
+}
+
+.gauge svg { transform: rotate(-90deg); }
+
+.gauge circle {
+  fill: none;
+  stroke-width: 12;
+}
+
+.gauge .bg { stroke: #1e293b; }
+
+.gauge .progress {
+  stroke: #facc15;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+.gauge-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #64748b;
+  padding: 20px;
+}

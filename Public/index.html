@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WiFi Health Monitor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>📶 WiFi Health Monitor</h1>
+  <p>Real-time network performance monitoring</p>
+  <div class="status">Connected</div>
+</header>
+
+<div class="container">
+
+  <div class="card quality-card">
+    <h3>Network Quality</h3>
+    <div class="gauge">
+      <svg width="160" height="160">
+        <circle class="bg" cx="80" cy="80" r="70"></circle>
+        <circle class="progress" cx="80" cy="80" r="70"></circle>
+      </svg>
+      <div class="gauge-text">
+        <div class="score" id="qualityScore">0</div>
+        <div class="label" id="qualityLabel">No Connection</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>WiFi Name (SSID)</h3>
+    <div class="value" id="ssid">--</div>
+  </div>
+
+  <div class="card">
+    <h3>Network Adapter</h3>
+    <div class="value" id="adapter">--</div>
+  </div>
+
+  <div class="card">
+    <h3>Signal Strength</h3>
+    <div class="value" id="signalValue">
+      <span id="signal">0</span>%
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Latency</h3>
+    <div class="value" id="latencyValue">
+      <span id="latency">0</span> ms
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Download Speed</h3>
+    <div class="value" id="downloadValue">
+      <span id="download">0</span> Mbps
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Upload Speed</h3>
+    <div class="value" id="uploadValue">
+      <span id="upload">0</span> Mbps
+    </div>
+  </div>
+
+</div>
+
+<div style="text-align:center; margin:20px;">
+  <button class="status" onclick="exportLog()">Export Network Report</button>
+</div>
+
+<div class="footer">
+  Metrics update every 8 seconds • Desktop WiFi Diagnostics
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
